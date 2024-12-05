@@ -3,3 +3,4 @@
 <li>{{ $task }}</li>
 @endforeach
 </ul>
+<div>{{ $foo }}</div>

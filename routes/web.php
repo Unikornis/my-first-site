@@ -32,12 +32,23 @@ Route::get('/tomb', function () {
     'Go to the store',
     'Go to the market',
     'Go to the work',
-    'Task #4'
+    'Task #3.5'
     ];
+    $foobar = 'foobar';
 /*
     return view('tasklist', [
     'tasks' => $tasks
     ]);
      */
-    return view('tasklist')->withTasks($tasks);
+    // return view('tasklist')->withTasks($tasks)->withFoo($foobar);
+    return view('tasklist')->with([
+        'foo' => $foobar,
+        'tasks' => $tasks
+        ]);
     });
+
+    Route::get('/request-test', function () {
+        return view('request-inputs', [
+        'title' => request('title'),
+        ]);
+        });
