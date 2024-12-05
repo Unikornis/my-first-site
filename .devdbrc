@@ -1,0 +1,6 @@
+[
+  {
+    "type": "sqlite",
+    "path": "c:\\xampp\\htdocs\\my-first-site\\database\\database.sqlite"
+  }
+]
