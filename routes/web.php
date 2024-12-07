@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PostController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,7 +77,7 @@ Route::get('/tomb', function () {
                     ]);
                 });
  */
-
+/*
  Route::get('/posts/{post}', function ($post) {
     $posts = [
     'elso-bejegyzes' => 'Helló, ez az első posztom a blogban!',
@@ -90,3 +91,10 @@ abort(404);
         'post' => $posts[$post] ?? 'Semmi nincs itt.'
         ]);
     });
+ */
+/*
+ Route::get('/posts/{post}', ['App\Http\Controllers\PostController',
+'show']);
+ */
+
+ Route::get('/posts/{post}', [PostController::class, 'show']);
