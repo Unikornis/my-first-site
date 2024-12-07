@@ -52,3 +52,41 @@ Route::get('/tomb', function () {
         'title' => request('title'),
         ]);
         });
+
+/*
+        Route::get('/posts/{post}', function ($post) {
+            return view('post', [
+            'post' => $post
+            ]);
+            });
+ */
+/*
+            Route::get('/posts/{post}', function ($post) {
+                $posts = [
+                'elso-bejegyzes' => 'Helló, ez az első posztom a blogban!',
+                'masodik-bejegyzes' => 'Most kezdek belejönni a blogolásba'
+                ];
+
+//                return view('post', [
+//                'post' => $posts[$post]
+//                ]);
+
+                return view('post', [
+                    'post' => $posts[$post] ?? 'Semmi nincs itt.'
+                    ]);
+                });
+ */
+
+ Route::get('/posts/{post}', function ($post) {
+    $posts = [
+    'elso-bejegyzes' => 'Helló, ez az első posztom a blogban!',
+    'masodik-bejegyzes' => 'Most kezdek belejönni a blogolásba'
+    ];
+
+if ( ! array_key_exists($post, $posts)) {
+abort(404);
+}
+    return view('post', [
+        'post' => $posts[$post] ?? 'Semmi nincs itt.'
+        ]);
+    });
