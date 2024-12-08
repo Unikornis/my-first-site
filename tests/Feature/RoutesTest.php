@@ -21,7 +21,7 @@ class RoutesTest extends TestCase
  */
         // 1. példa
         $response = $this->get('/');
-        $response->assertViewIs('welcome');
+        $response->assertViewIs('layout');
     }
     /**
      * A basic feature test:
