@@ -1,2 +1,7 @@
-<h1>Kapcsolat</>
-<h2>Üdvözlet {{ $name }}!</h2>
+@extends('layout')
+@section('content')
+<h1>Ez egy kapcsolati oldal.</h1>
+@endsection
+@section('title')
+Kapcsolat
+@endsection

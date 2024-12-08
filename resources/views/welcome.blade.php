@@ -1,3 +1,12 @@
+@extends('layout')
+
+@section('content')
+  Hi, {{ $name }}
+@endsection
+
+@section('title')
+Kezdőoldal
+@endsection
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

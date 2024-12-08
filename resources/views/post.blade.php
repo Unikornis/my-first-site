@@ -1,2 +1,8 @@
-<p>{{ $post }}</p>
-<p>A kapott adat hossza: {{ $length }} karakter</p>
+@extends('layout')
+@section('content')
+  <p>{{ $post }}</p>
+  <p>length: {{ $length }} character(s)</p>
+@endsection
+@section('title')
+Első blogbejegyzés
+@endsection
