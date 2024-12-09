@@ -1,5 +1,5 @@
-@extends('layout')
-
+<!-- @extends('layout') -->
+@extends('pastel-layout')
 @section('content')
   Hi, {{ $name }}
 @endsection

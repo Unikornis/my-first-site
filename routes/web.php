@@ -15,7 +15,7 @@ use App\Http\Controllers\PostController;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    return view('pastel-layout');
 });
 
 Route::get('/contact', function () {

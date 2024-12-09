@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('pastel-layout')
 @section('content')
   <p>{{ $post }}</p>
   <p>length: {{ $length }} character(s)</p>
